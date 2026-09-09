@@ -1,0 +1,45 @@
+:root {
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-muted: #888888;
+  --border: #e5e5e5;
+  --background: #ffffff;
+}
+.main-container{
+    margin-top: 20px;
+    padding: 20px 43px 20px;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    color: var(--text-primary);
+}
+.project-desc{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 20px;
+}
+.description{
+    line-height: 1.9;
+    font-size: 22px;
+}
+.get-start-btn{
+    color: #fff;
+    background-color: var(--text-primary);
+    outline: none;
+    width: fit-content;
+    border-radius: 6px;
+    padding: 5px 20px;
+    font-size:21px;
+    border: none;
+    cursor: pointer;
+}
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.cv-img{
+    width: 400px;
+    height: auto;
+    transform: rotate(2deg);
+}

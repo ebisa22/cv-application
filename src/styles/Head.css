@@ -1,0 +1,44 @@
+:root {
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-muted: #888888;
+  --border: #e5e5e5;
+  --background: #ffffff;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 42px 20px;
+    color: var(--text-muted); 
+}
+.head-title{
+    font-weight: 400;
+    font-size: 28px;
+    cursor: pointer;
+    transition: color 0.1s ease-in;
+}
+.head-title:hover{
+    color: #000;
+}
+.nav-bar{
+    display: flex;
+    align-items:center;
+    gap: 40px;
+}
+.active-btn .btn{
+   color: #000;
+}
+.btn{
+    outline: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition:all 0.12s linear;
+    font-size: 21px;
+    color: inherit;
+    padding-bottom: 2px;
+}
+.btn:hover{
+     color: #000;
+     border-bottom: 2px solid var(--border);
+}
