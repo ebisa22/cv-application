@@ -4,8 +4,9 @@
   --text-muted: #888888;
   --border: #e5e5e5;
   --background: #ffffff;
+--section-background: #2563eb;
 }
-.main-container{
+.homepage-container{
     margin-top: 20px;
     padding: 20px 43px 20px;
     display: grid;
@@ -24,7 +25,7 @@
 }
 .get-start-btn{
     color: #fff;
-    background-color: var(--text-primary);
+    background-color: var(--section-background);
     outline: none;
     width: fit-content;
     border-radius: 6px;
@@ -32,6 +33,12 @@
     font-size:21px;
     border: none;
     cursor: pointer;
+    transition: all 0.2 ease-in;
+    
+}
+.get-start-btn:hover{
+   transform: translateY(-1px);
+
 }
 .img-container{
     display: flex;

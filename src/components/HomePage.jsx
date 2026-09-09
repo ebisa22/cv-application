@@ -1,9 +1,9 @@
-import cvImage from '../assets/cv-img.png'
+import cvImage from '../assets/cv-img-2.png'
 import '../styles/HomePage.css'
 
 export default function HomePage(props){
     return (
-      <main className="main-container">
+      <main className="homepage-container">
         <div className="project-desc">
           <p className="description">
             CV Builder is a simple web application that allows users to create
