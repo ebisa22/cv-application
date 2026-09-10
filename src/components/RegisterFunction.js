@@ -1,9 +1,10 @@
 export const Person = {
-  
 };
 export const RegisterFuncs = {
   addFirstName(e) {
     Person.firstName = e.target.value;
+    Person[e.target.value]="johoho";
+    console.log(Person)
   },
   addLastName(e) {
     Person.lastName = e.target.value;
