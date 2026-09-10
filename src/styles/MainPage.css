@@ -46,7 +46,7 @@
  gap: 12px;
 }
 .info-cont label{
- font-size: 17px;
+ font-size: 16px;
 }
 .info-cont input{
  outline: none;
@@ -54,7 +54,7 @@
  background-color: #fafafa;
  border-radius: 4px;
  padding: 10px 20px;
- font-size: 16px;
+ font-size: 14px;
  color: inherit;
 }
 .info-cont input:focus{
@@ -90,8 +90,8 @@ font-size: 22px;
     border: none;
     border-radius: 2px;
     cursor: pointer;
-    padding: 10px 15px;
-    font-size: 18px;
+    padding: 8px 15px;
+    font-size: 16px;
 }
 .company-form{
     display: grid;
@@ -136,4 +136,40 @@ font-size: 22px;
 
  .company-submit[open]::backdrop {
      background: rgba(0, 0, 0, 0.2);
+ }
+
+.modal-btns{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+ .modal-btn{ 
+    font-size: 16px;
+    width: 230px;
+     cursor: pointer;
+     padding: 6px 0px;
+ }
+.close-modal {
+  background: #418200;
+  color: #fff;
+  border: 1px solid #dee2e6;
+}
+
+.submit-company-btn {
+  background: #111827;
+  color: #fff;
+  border: 1px solid #111827;
+}
+
+.close-modal:hover {
+  background: #4e9a03;
+}
+
+.submit-company-btn:hover {
+  background: #1f2937;
+}
+
+ .company-warning{
+    font-size: 16px;
+    color: red;
  }

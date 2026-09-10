@@ -1,10 +1,9 @@
 export const Person = {
+  experience:[],
 };
 export const RegisterFuncs = {
   addFirstName(e) {
     Person.firstName = e.target.value;
-    Person[e.target.value]="johoho";
-    console.log(Person)
   },
   addLastName(e) {
     Person.lastName = e.target.value;
@@ -26,6 +25,8 @@ export const RegisterFuncs = {
   },
   addEducationStart(e){
     Person.degreeStart = e.target.value;
-
+  },
+  addExperience(company){
+    Person.experience.push({...company,id:crypto.randomUUID()})
   }
 };
