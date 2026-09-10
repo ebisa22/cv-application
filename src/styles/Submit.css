@@ -1,0 +1,24 @@
+:root {
+ --text-primary: #333333;
+ --text-secondary: #666666;
+ --text-muted: #888888;
+ --border: #e5e5e5;
+ --primary-white: #f1f5f9;
+ --section-background: #2563eb;
+}
+.full-submit-container{
+ padding-top: 50px;
+ text-align: center;
+}
+.full-submit-btn{
+ background-color:#047004;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  
+}

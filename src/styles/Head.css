@@ -6,7 +6,7 @@
   --primary-white: #f1f5f9;
   --section-background:#2563eb;
 }
-header{
+.top-header{
     display: flex;
     justify-content: space-between;
     padding: 20px 42px 20px;

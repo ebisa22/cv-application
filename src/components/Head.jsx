@@ -2,7 +2,7 @@ import '../styles/Head.css'
 
 export default function Head(props){
     return (
-      <header>
+      <header className="top-header">
         <h1 className="head-title"  onClick={props.goHome}>CV Builder</h1>
         <nav className="nav-bar">
           <div

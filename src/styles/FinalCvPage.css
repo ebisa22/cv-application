@@ -1,0 +1,259 @@
+.final-page {
+ width: 100%;
+ background-color: var(--main-background);
+ padding: 50px 20px;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ align-items: center;
+}
+.page-view {
+ width: min(700px, 100%);
+ min-height: 900px;
+ background-color: #ffffff;
+ color: var(--text-primary);
+ border: 1px solid var(--border);
+ box-shadow:
+  0 4px 12px rgba(0, 0, 0, 0.06),
+  0 15px 35px rgba(0, 0, 0, 0.04);
+ padding: 55px 65px;
+}
+.cv-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: flex-start;
+ gap: 40px;
+ padding-bottom: 25px;
+ border-bottom: 3px solid var(--section-background);
+ 
+}
+.cv-header-main {
+ display: flex;
+ flex-direction: column;
+}
+.cv-header h1 {
+ color: #1f2937;
+ font-size: 34px;
+ font-weight: 700;
+ line-height: 1.15;
+ letter-spacing: -1px;
+}
+.cv-title {
+ margin-top: 8px;
+ color: var(--section-background);
+ font-size: 16px;
+ font-weight: 500;
+}
+.cv-contact {
+ display: flex;
+ flex-direction: column;
+ align-items: flex-end;
+ gap: 10px;
+ padding-top: 5px;
+ color: var(--text-primary);
+ font-size: 17px;
+}
+.cv-content {
+ padding-top: 30px;
+}
+.cv-section {
+ margin-bottom: 32px;
+}
+.cv-section h2 {
+ margin-bottom: 35px;
+ padding-bottom: 7px;
+ border-bottom: 1px solid var(--border);
+ color: var(--section-background);
+ font-size: 20px;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 1.5px;
+ margin-top: 40px;
+}
+.profile-text {
+ color: var(--text-primary);
+ font-size: 16px;
+ line-height: 2;
+ text-align: justify;
+}
+.experience-list {
+ display: flex;
+ flex-direction: column;
+ gap: 28px;
+}
+.experience-item {
+ width: 100%;
+}
+.experience-top {
+ display: flex;
+ justify-content: space-between;
+ align-items: flex-start;
+ gap: 30px;
+}
+.experience-role h3 {
+ color: #1f2937;
+ font-size: 16px;
+ font-weight: 650;
+ line-height: 1.4;
+}
+.experience-company {
+ margin-top: 4px;
+ color: var(--text-primary);
+ font-size: 14px;
+ font-weight: 500;
+}
+.experience-date {
+ color: var(--text-secondary);
+ font-size: 14px;
+ white-space: nowrap;
+ padding-top: 2px;
+}
+.experience-description {
+ margin-top: 10px;
+ color: var(--text-secondary);
+ font-size: 13px;
+ line-height: 1.7;
+}
+.education-item {
+ 
+ display: flex;
+ justify-content: space-between;
+ align-items: flex-start;
+ gap: 30px;
+}
+
+.education-main h3 {
+ color: #1f2937;
+ font-size: 16px;
+ font-weight: 650;
+}
+.education-school {
+ margin-top: 5px;
+ color: var(--text-secondary);
+ font-size: 14px;
+}
+.education-date {
+ color: var(--text-secondary);
+ font-size: 14px;
+ white-space: nowrap;
+}
+.highlight-grid {
+ display: grid;
+
+ grid-template-columns: repeat(3, 1fr);
+
+ gap: 15px;
+}
+.highlight {
+ display: flex;
+ gap: 10px;
+ padding: 15px;
+ background-color: #f8fafc;
+ border: 1px solid var(--border);
+ border-radius: 4px;
+}
+.highlight-number {
+ color: var(--section-background);
+ font-size: 14px;
+ font-weight: 700;
+ padding-top: 2px;
+}
+.highlight h3 {
+ color: #1f2937;
+ font-size: 16px;
+ font-weight: 650;
+ margin-bottom: 5px;
+}
+.highlight p {
+ color: var(--text-secondary);
+ font-size: 12px;
+ line-height: 1.55;
+}
+.final-btns{
+ display: flex;
+ justify-content: space-around;
+ width: min(700px,
+  100%);
+ background-color: #fff;
+ padding: 15px 0px;
+}
+.final-btns button{
+ cursor: pointer;
+ outline: none;
+ font-size: 16px;
+ padding: 8px 13px;
+ border: none;
+ border-radius: 4px;
+ color: #fff;
+ transition: all 0.1s ease-in-out;
+}
+.final-btns button:hover{
+ transform: translateY(-1px);
+}
+.download-btn{
+ background-color: #418200;
+}
+.final-cancel-btn{
+ background-color: #111;
+}
+@media (max-width: 700px) {
+ .final-page {
+  padding: 20px 10px;
+ }
+ .page-view {
+  min-height: auto;
+  padding: 35px 25px;
+ }
+ .cv-header {
+  flex-direction: column;
+  gap: 18px;
+ }
+ .cv-header h1 {
+  font-size: 30px;
+ }
+ .cv-contact {
+  align-items: flex-start;
+ }
+ .experience-top {
+  flex-direction: column;
+  gap: 6px;
+ }
+ .experience-date {
+  white-space: normal;
+ }
+ .education-item {
+  flex-direction: column;
+  gap: 7px;
+ }
+ .education-date {
+  white-space: normal;
+ }
+ .highlight-grid {
+  grid-template-columns: 1fr;
+ }
+}
+
+
+@media print {
+ .final-page {
+  min-height: auto;
+  padding: 0;
+  background-color: #ffffff;
+ }
+ .page-view {
+  width: 100%;
+  min-height: auto;
+  padding: 40px 50px;
+  border: none;
+  box-shadow: none;
+ }
+ .cv-section {
+  break-inside: avoid;
+ }
+ .experience-item {
+  break-inside: avoid;
+ }
+ .highlight {
+  break-inside: avoid;
+ }
+}

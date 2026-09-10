@@ -1,8 +1,12 @@
 import '../styles/MainPage.css'
 import {useState,useRef} from 'react'
 import { RegisterFuncs } from './RegisterFunction.js'
+import { Person } from './RegisterFunction.js';
 
 export default function ExperienceInfo(props){
+  const dialogRef=useRef(null);
+  const [companies,setCompanies]=useState([]);
+
 const company = {
   info: {
     start: "",
@@ -22,33 +26,46 @@ const company = {
     return true;
   },
 };
-
-  const dialogRef=useRef(null);
-
-  function showSubmitForm(){
+  
+function showSubmitForm(){
     dialogRef.current.showModal();
   }
-
+  
   function CompanyForm(){
     const [warning, setWarning] = useState(false);
-             function closeSubmitForm() {
-               for (let prop in company) {
-                 company[prop] = "";
+             
+    function closeSubmitForm() {
+               for (let prop in company.info) {
+                 company.info[prop] = "";
                }
                dialogRef.current.close();
                setWarning(false);
              }
-      function handleAddCompany(e) {
-        let validForm = company.checkValidity();
-        if (validForm) {
-          RegisterFuncs.addExperience(company);
-          closeSubmitForm();
-          setWarning(false);
-        } else {
-          setWarning(true)
-          
-        }
-      }
+     function handleAddCompany(e) {
+    const validForm = company.checkValidity();
+
+    if (validForm) {
+        const newCompany = {
+            ...company.info,
+            id: crypto.randomUUID()
+        };
+
+        RegisterFuncs.addExperience(newCompany);
+
+        setWarning(false);
+
+        setCompanies(prev => [
+            ...prev,
+            newCompany
+        ]);
+
+        closeSubmitForm();
+
+    } else {
+        setWarning(true);
+    }
+}
+
       return (
         <>
           <section className="company-form">
@@ -93,7 +110,7 @@ const company = {
               <label htmlFor="company-res">Role in the company</label>
               <input
                 className="company-res"
-                id="company-name"
+                id="company-res"
                 type="text"
                 onChange={(e) => {
                   company.info.Role = e.target.value;
@@ -126,6 +143,58 @@ const company = {
         </>
       );
   }
+function removeCompany(id) {
+  setCompanies(prev =>
+    prev.filter(company => company.info.id !== id)
+  );
+
+  RegisterFuncs.removeCompany(id);
+}
+
+ function ListCompanies() {
+    return (
+        <div >
+
+            {companies.length > 0 && (
+                <div className="companies-container">
+                    {companies.map((company) => (
+
+                        <div
+                            key={company.id}
+                            className="company-container"
+                        >
+
+                            <h3>
+                                {company.companyName}
+                            </h3>
+
+                            <p>
+                                {company.Role}
+                            </p>
+
+                            <p>
+                                {company.start}
+                                {' -- '}
+                                {company.end || 'Present'}
+                            </p>
+
+                            <button
+                                className="company-btn"
+                                onClick={() => removeCompany(company.id)}
+                            >
+                                X
+                            </button>
+
+                        </div>
+
+                    ))}
+                </div>
+            )}
+
+        </div>
+    );
+}
+
  return(
    <>
     <h2 className="experience-title">Experience</h2>
@@ -136,7 +205,7 @@ const company = {
       <button className="add-company-btn" onClick={showSubmitForm} type='button'>
          Add Company
       </button>
-      
+      <ListCompanies/>
     </section>
    </>
  );

@@ -32,6 +32,10 @@
  text-align: center;
  margin-bottom: 45px;
 }
+.full-warning{
+    color: red;
+    margin-bottom: 15px;
+}
 .general-info{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -90,8 +94,10 @@ font-size: 22px;
     border: none;
     border-radius: 2px;
     cursor: pointer;
-    padding: 8px 15px;
+    width: 120px;
+    height: 40px;
     font-size: 16px;
+    margin-bottom: 30px;
 }
 .company-form{
     display: grid;
@@ -162,7 +168,7 @@ font-size: 22px;
 }
 
 .close-modal:hover {
-  background: #4e9a03;
+  background: #047004;
 }
 
 .submit-company-btn:hover {
@@ -173,3 +179,34 @@ font-size: 22px;
     font-size: 16px;
     color: red;
  }
+
+ .companies-container {
+     font-size: 16px;
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+     gap: 15px;
+ }
+
+ .company-container {
+     border: 1px solid var(--text-muted);
+     border-radius: 4px;
+     box-shadow: 2px 2px 2px var(--border);
+     padding: 8px 15px;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     position: relative;
+ }
+
+ .company-btn{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 22px;
+    color: red;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+ }
+ 
