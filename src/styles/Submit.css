@@ -19,6 +19,25 @@
   cursor: pointer;
   width: 120px;
   height: 40px;
-  font-size: 16px;
-  
+  font-size: 16px; 
+}
+
+@media screen and (max-width:770px){
+  .full-submit-container{
+    padding-top: 38px;
+  }
+  .full-submit-btn{
+    height: 34px;
+    width: 110px;
+  }
+}
+@media screen and (max-width:400px){
+  .full-submit-container{
+    padding-top: 32px;
+  }
+  .full-submit-btn{
+    font-size: 13px;
+    height: 26px;
+    width: 90px;
+  }
 }

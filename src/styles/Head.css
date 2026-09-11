@@ -72,12 +72,12 @@
 }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:430px) {
     .head-title{
-        font-size: 18px;
+        font-size: 16px;
     }
     .top-header {
-            padding: 15px;
+            padding: 12px;
             width: 100%;
         }
         .nav-bar {
@@ -85,6 +85,6 @@
         }
     
         .btn {
-            font-size: 14px;
+            font-size: 12.5px;
         }
 }

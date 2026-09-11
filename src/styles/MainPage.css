@@ -226,7 +226,7 @@ font-size: 22px;
  /* tablet view */
  
  @media screen and (max-width:770px) {
-    .main {
+     .main {
             padding: 30px 0px;
         }
        
@@ -381,12 +381,14 @@ font-size: 22px;
          padding: 20px 25px;
          width: 85%;
      }
+     
      .main-title {
          font-size: 19px;
      }
 
      .full-warning {
-         margin-bottom: 22px;
+        font-size: 12px;
+         margin-bottom: 18px;
      }
 
      .info-cont {
@@ -398,7 +400,55 @@ font-size: 22px;
     .info-cont input{
         font-size: 13px;
          padding: 5px 15px;
-         min-width:250px;
     } 
-
+    .add-company-btn{
+    width: 105px;
+    height: 26px;
+    font-size: 13px;
+    display: block;
+    margin-inline: 0px auto 28px;
+}
+.company-submit .info-cont{
+    margin-bottom: 11px;
+}
+.company-submit label{
+    font-size: 11px !important;
+}
+.company-submit input{
+    font-size: 11px !important;
+}
+.company-warning{
+    font-size: 10px;  
+ }
+ .submit-company-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 22px;
+    font-size: 10px;
+ }
+ .close-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    width:65px;
+    height: 22px;
+ }
+  .companies-container {
+            font-size: 11px;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+        .company-container {
+            width: 70%;
+            gap: 7px;
+        }
+        .company-btn {
+            font-size: 12px;
+            width: 20px;
+            height: 20px;
+        }
  }
