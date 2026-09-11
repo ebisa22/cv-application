@@ -6,9 +6,8 @@ import FinalCvPage from './FinalCvPage.jsx'
 import Footer from './Footer.jsx'
 import { clearForm } from './RegisterFunction.js'
 import '../styles/App.css'
-
 function App() {
-  const [appMode,setAppMode]=useState("home");
+  const [appMode,setAppMode]=useState("main");
   function goHome(){
     setAppMode('home')
   }
