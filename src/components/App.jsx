@@ -8,7 +8,7 @@ import { clearForm } from './RegisterFunction.js'
 import '../styles/App.css'
 
 function App() {
-  const [appMode,setAppMode]=useState("main");
+  const [appMode,setAppMode]=useState("home");
   function goHome(){
     setAppMode('home')
   }

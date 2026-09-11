@@ -17,6 +17,12 @@
  background-color: var(--main-background);
  padding: 40px 0px;
 }
+input:focus:invalid{
+  border:1.4px solid red !important;
+}
+input:focus:valid{
+    border:1.4px solid green !important;
+}
 .main-container{
  color: var(--text-primary);
  background-color:#Fff;

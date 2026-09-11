@@ -78,6 +78,7 @@ function showSubmitForm(){
                 onChange={(e) => {
                   company.info.start = e.target.value;
                 }}
+                required
               />
             </div>
 
@@ -92,6 +93,7 @@ function showSubmitForm(){
                 onChange={(e) => {
                   company.info.end = e.target.value;
                 }}
+                required
               />
             </div>
 
@@ -104,6 +106,7 @@ function showSubmitForm(){
                 onChange={(e) => {
                   company.info.companyName = e.target.value;
                 }}
+                required
               />
             </div>
             <div className="company-res-container info-cont">
@@ -115,6 +118,7 @@ function showSubmitForm(){
                 onChange={(e) => {
                   company.info.Role = e.target.value;
                 }}
+                required
               />
             </div>
           </section>

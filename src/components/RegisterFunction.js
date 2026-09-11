@@ -3,19 +3,21 @@ export const Person = {
 };
 export const RegisterFuncs = {
   addFirstName(e) {
-    Person.firstName = e.target.value;
+    Person.firstName = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1).toLowerCase();
   },
   addLastName(e) {
-    Person.lastName = e.target.value;
+    Person.lastName = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1).toLowerCase();
   },
   addEmail(e) {
-    Person.email = e.target.value;
+    Person.email = e.target.value.toLowerCase();
   },
   addPhone(e) {
     Person.phoneNumber = e.target.value;
   },
   addSchoolName(e) {
-    Person.schoolName = e.target.value;
+    Person.schoolName =
+      e.target.value.charAt(0).toUpperCase() +
+      e.target.value.slice(1).toLowerCase();
   },
   addDegree(e) {
     Person.degree = e.target.value;

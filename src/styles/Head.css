@@ -44,3 +44,30 @@
      color: #fff;
      border-bottom: 2px solid var(--border);
 }
+
+@media screen and (max-width:770px) {
+   .top-header{
+    padding: 15px 35px 20px;
+    width: 100%;
+}
+.nav-bar{
+    gap: 30px;
+}
+.btn{
+    font-size: 18px;
+}
+}
+@media screen and (max-width:650px) {
+    .top-header{
+    padding: 20px 25px 20px;
+}
+.head-title{
+    font-size: 25px;
+}
+.nav-bar{
+    gap: 23px;
+}
+.btn{
+    font-size: 18px;
+}
+}

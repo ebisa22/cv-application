@@ -56,7 +56,6 @@ export default function FinalCvPage(props) {
   }
   function handleCancel(){
    props.goBack();
-
   }
   return (
     <main className="final-page">
@@ -265,7 +264,6 @@ export default function FinalCvPage(props) {
       <div className="final-btns">
        <button className="download-btn" onClick={()=>{
         handleDownload();
-        handleCancel();
        }}>
         Download CV
        </button>

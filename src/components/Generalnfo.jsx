@@ -8,6 +8,7 @@ function Name(props) {
         className={props.type}
         id={props.type}
         onChange={props.onChange}
+        required
       />
   );
 }
@@ -29,6 +30,7 @@ export default function GeneralInfo() {
           id="email"
           type="email"
           onChange={RegisterFuncs.addEmail}
+          required
         ></input>
       </div>
       <div className="phone-container info-cont">
@@ -38,6 +40,7 @@ export default function GeneralInfo() {
           id="tel"
           type="tel"
           onChange={RegisterFuncs.addPhone}
+          required
         ></input>
       </div>
     </section>

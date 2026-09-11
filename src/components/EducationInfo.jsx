@@ -13,6 +13,7 @@ export default function EducationInfo(props){
               id="school"
               type="text"
               onChange={RegisterFuncs.addSchoolName}
+              required
             ></input>
           </div>
           <div className="degree-container info-cont">
@@ -22,6 +23,7 @@ export default function EducationInfo(props){
               id="degree"
               type="text"
               onChange={RegisterFuncs.addDegree}
+              required
             ></input>
           </div>
           <div className="education-start-container info-cont">
@@ -31,6 +33,7 @@ export default function EducationInfo(props){
               id="education-start"
               type="month"
               onChange={RegisterFuncs.addEducationStart}
+              required
             />
           </div>
 
@@ -41,6 +44,7 @@ export default function EducationInfo(props){
               id="graduation-date"
               type="month"
               onChange={RegisterFuncs.addGraduationDate}
+              required
             />
           </div>
         </section>
